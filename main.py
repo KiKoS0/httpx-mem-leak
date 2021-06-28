@@ -5,8 +5,6 @@ import os
 import psutil
 import gc
 
-client = httpx.AsyncClient()
-
 tracker = SummaryTracker()
 
 
@@ -21,11 +19,10 @@ async def getImgUrl(url):
                     found = True
                     break
 
-
 async def main():
     process = psutil.Process(os.getpid())
 
-    content = readUrls("leaking-links.txt")
+    content = readUrls("normal-links.txt")
 
     for chunk in batch(content, 60):
         tasks = []
