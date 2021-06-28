@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pymongo
+loguru==0.5.3
+pytest==6.2.4
+requests==2.25.1
+httpx==0.18.2
+aiohttp==3.7.4.post0 
+pympler
+psutil
