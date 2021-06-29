@@ -22,9 +22,9 @@ async def getImgUrl(url):
 async def main():
     process = psutil.Process(os.getpid())
 
-    content = readUrls("normal-links.txt")
+    content = readUrls("leaking-links.txt")
 
-    for chunk in batch(content, 60):
+    for chunk in batch(content, 40):
         tasks = []
 
         for line in chunk:
